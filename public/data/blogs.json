@@ -1,0 +1,38 @@
+[
+  {
+    "id": "angular-state-management-2026",
+    "title": "State Management in Angular 20+: Signals vs. NgRx",
+    "summary": "An in-depth architectural comparison between Angular Signals and NgRx for building high-performance, predictable corporate web applications.",
+    "content": "<p>State management has been a cornerstone of frontend architecture conversations for years. With the release of Angular's latest versions, <strong>Signals</strong> have matured from an experimental feature to the primary mechanism for reactivity in Angular. But does this mean classic state stores like <strong>NgRx</strong> are obsolete?</p><h3>The Power of Angular Signals</h3><p>Signals introduce fine-grained reactivity. Unlike Zone.js which triggers checks across the component tree, Signals notify Angular precisely which DOM nodes need updating. This results in incredibly fast rendering performance and cleaner component code without excessive RxJS boilerplate.</p><pre><code>// Simple counter signal\ncounter = signal(0);\nincrement() {\n  this.counter.update(v => v + 1);\n}</code></pre><h3>When is NgRx Still Relevant?</h3><p>NgRx provides a highly structured Redux pattern with strict unidirectional data flow, actions, reducers, and effects. While Signals are perfect for local and shared service state, NgRx shines in complex applications that demand:</p><ul><li>Strict action auditing & state time-travel debugging.</li><li>Advanced WebSocket synchronization or elaborate background side-effects.</li><li>Normalized caching layers for massive, interdependent databases.</li></ul><h3>Conclusion</h3><p>For most modern projects, a combination of **Signal-based services** for local UI/shared state and lightweight router resolvers is more than sufficient. NgRx remains an excellent option for large, multi-team enterprise hubs that require unified design patterns.</p>",
+    "category": "Angular",
+    "publishedDate": "2026-05-12",
+    "author": "Ashan TechLabs",
+    "readTime": "6 min read",
+    "image": "images/blog-angular.png",
+    "featured": true
+  },
+  {
+    "id": "micro-frontends-enterprise-scale",
+    "title": "Scaling Enterprise Frontend Apps with Micro-Frontends",
+    "summary": "Exploring Module Federation, independent deployments, and shared design systems in modern federated architectures.",
+    "content": "<p>As organization structures grow, single monorepos can become build-time bottlenecks. Micro-frontends offer a solution by dividing the web application into decoupled, independently deployable sub-apps. But how do we achieve this without bloated bundles or visual styling inconsistencies?</p><h3>Webpack Module Federation in Angular</h3><p>Module Federation allows an Angular host shell to dynamically load components, routes, or modules from remote hosts at runtime. This maintains compilation independence while keeping the user experience feeling like a single SPA.</p><h3>Critical Challenges to Address</h3><ol><li><strong>Shared Dependencies:</strong> Loading multiple versions of Angular or Angular Material will break the application. Webpack must be configured to share singleton instances.</li><li><strong>Design System Consistency:</strong> A unified CSS variable foundation (like Tailwind or custom CSS variables) must be shared and versioned across all teams.</li><li><strong>Cross-app Communication:</strong> Use lightweight pub-sub events or query parameters instead of hard shared state to keep micro-apps loosely coupled.</li></ol><h3>Final Verdict</h3><p>Micro-frontends introduce operational complexity. Do not adopt them for small or medium apps. However, for organizations with 50+ developers working on disjointed panels within the same dashboard, it's a game-changer.</p>",
+    "category": "Architecture",
+    "publishedDate": "2026-04-20",
+    "author": "Ashan TechLabs",
+    "readTime": "8 min read",
+    "image": "images/blog-microfrontends.png",
+    "featured": false
+  },
+  {
+    "id": "serverless-apis-nestjs-aws",
+    "title": "Optimizing Serverless APIs with NestJS and AWS Lambda",
+    "summary": "Learn how to build, compile, and deploy highly scalable NestJS backends on serverless infrastructure with minimal cold starts.",
+    "content": "<p>Serverless computing removes database management overhead and scales dynamically with traffic. NestJS, combined with AWS Lambda and API Gateway, offers a structured, dependency-injected framework for creating serverless endpoints. Let's analyze how to optimize their deployment.</p><h3>Reducing Lambda Cold Starts</h3><p>Cold start times are the primary drawback of running Node.js serverless functions. To minimize latency:</p><ul><li><strong>Tree-shake aggressively:</strong> Use Esbuild to bundle the application down to a single optimized Javascript file.</li><li><strong>Use Fastify:</strong> Replace NestJS's default Express engine with Fastify to increase routing speeds.</li><li><strong>Avoid heavy ORMs:</strong> Choose lightweight SQL builders like Kysely or Drizzle instead of heavy options like TypeORM or Hibernate.</li></ul><h3>Deploying with Serverless Framework</h3><p>The Serverless Framework makes resource allocation simple. Define functions, VPC access, and CORS headers in a simple YAML configuration.</p>",
+    "category": "Cloud & Backend",
+    "publishedDate": "2026-03-15",
+    "author": "Ashan TechLabs",
+    "readTime": "5 min read",
+    "image": "images/blog-serverless.png",
+    "featured": false
+  }
+]

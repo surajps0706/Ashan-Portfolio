@@ -1,0 +1,12 @@
+.main-content-layout {
+  padding-top: 120px;
+  min-height: calc(100vh - 120px - 300px); // subtracts header padding and rough footer height
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    padding-top: 96px;
+  }
+}

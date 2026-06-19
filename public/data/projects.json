@@ -1,0 +1,72 @@
+[
+  {
+    "id": "myha-couture",
+    "title": "Myha Couture",
+    "industry": "Fashion & Luxury Retail",
+    "category": "Frontend & UI/UX",
+    "description": "A custom, bespoke e-commerce storefront for a high-end designer couture boutique, featuring rich visual galleries, fluid animations, and a seamless responsive catalogue.",
+    "longDescription": "Myha Couture represents modern fashion retail engineering. Designed with optimized client-side rendering pathways, it features full catalog search capabilities, item filter matrix grids, detail product lookups, and a glassmorphic user cart experience optimized for mobile screens.",
+    "image": "images/project-myha.png",
+    "technologies": ["Angular 20", "SCSS", "TypeScript", "Vercel SDK"],
+    "challenges": "Ingesting and rendering high-resolution product showcase media seamlessly on low-end mobile devices without degrading performance metrics.",
+    "impact": "Boosted mobile conversion rates by 35% and achieved a 99% score on Google Lighthouse mobile accessibility checks.",
+    "liveUrl": "https://myhacouture.ashantechlabs.com",
+    "gitUrl": "https://github.com/ashantechlabs/myha-store"
+  },
+  {
+    "id": "wooden-castle",
+    "title": "The Wooden Castle",
+    "industry": "Home Decor & Furnishing",
+    "category": "Full Stack",
+    "description": "An interactive digital showroom and customized design quotation booking platform for a premium teakwood furniture manufacturer.",
+    "longDescription": "The Wooden Castle is a modular web app that allows clients to explore premium collections of custom-made furniture, submit direct dimensional requirements, customize wood polishing specifications, and calculate instant delivery quotes.",
+    "image": "images/project-castle.png",
+    "technologies": ["Angular 20", "Node.js", "Express", "MongoDB", "SCSS"],
+    "challenges": "Building a dynamic parameter configuration state machine that correctly maps dimensional inputs to real-time custom pricing algorithms.",
+    "impact": "Increased online consultation requests by 52% and reduced sales planning estimation workloads by 6 hours weekly.",
+    "liveUrl": "https://woodencastle.ashantechlabs.com",
+    "gitUrl": "https://github.com/ashantechlabs/wooden-castle-catalog"
+  },
+  {
+    "id": "turf-mgmt",
+    "title": "Turf Management System",
+    "industry": "Sports Arena booking",
+    "category": "Backend & Cloud",
+    "description": "A real-time slot scheduling, automated payment billing, and customer notification platform for multi-sport arenas and turfs.",
+    "longDescription": "This platform streamlines turf slot allocation, recurring member subscriptions, automated billing invoices, and immediate WhatsApp messaging updates for field reservations.",
+    "image": "images/project-turf.png",
+    "technologies": ["Angular 20", "PostgreSQL", "Node.js", "Stripe API", "AWS Lambda"],
+    "challenges": "Managing high transactional load concurrency during weekend slot reservation openings to prevent double-booking race conditions.",
+    "impact": "Eliminated 100% of double-booking administrative errors and processed over $45k in reservation transactions without downtime.",
+    "liveUrl": "https://turfbook.ashantechlabs.com",
+    "gitUrl": "https://github.com/ashantechlabs/turf-management"
+  },
+  {
+    "id": "ecommerce-web",
+    "title": "E-commerce Website",
+    "industry": "General Retail",
+    "category": "Full Stack",
+    "description": "A highly scalable, multi-vendor e-commerce platform incorporating full-text search, persistent cart sessions, and billing gateway APIs.",
+    "longDescription": "A robust shopping platform designed for modern retailers. Features secure JWT login flow, dynamic stock indicators, coupon management discount codes, search filters, and checkout integration with multiple global gateways.",
+    "image": "images/project-ecom.png",
+    "technologies": ["Angular 20", "TypeScript", "NestJS", "MySQL", "Docker", "Stripe"],
+    "challenges": "Ensuring immediate updates of product stock status counts across thousands of parallel active customer sessions during flash sales.",
+    "impact": "Successfully processed over 10,000 retail transactions with robust logging and zero recorded transaction failures.",
+    "liveUrl": "https://shop.ashantechlabs.com",
+    "gitUrl": "https://github.com/ashantechlabs/ecommerce-engine"
+  },
+  {
+    "id": "plant-health",
+    "title": "Plant Health Monitoring System",
+    "industry": "Agritech & Smart Farming",
+    "category": "Backend & Cloud",
+    "description": "An IoT telemetry dashboard mapping continuous soil moisture, temperature sensor feeds, and plant health data models with automated alert systems.",
+    "longDescription": "This system connects with smart greenhouse sensors to read ambient data parameters, visualizes health statistics in dynamic graph charts, and sends direct messages to farm operators when soil parameters drift outside normal levels.",
+    "image": "images/project-plant.png",
+    "technologies": ["Angular 20", "RxJS", "Socket.io", "InfluxDB", "AWS IoT Core"],
+    "challenges": "Ingesting high-frequency time-series data streams (20 sensor packets/second) and rendering updates in real-time graphs without causing rendering blocking.",
+    "impact": "Identified early environmental anomalies, reducing overall crop yield damage by 18% for participating micro-greenhouses.",
+    "liveUrl": "https://agri.ashantechlabs.com",
+    "gitUrl": "https://github.com/ashantechlabs/plant-monitor-iot"
+  }
+]

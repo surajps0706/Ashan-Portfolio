@@ -1,6 +1,10 @@
 {
   "name": "portfolio-website",
   "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -18,25 +22,24 @@
       }
     ]
   },
-  "private": true,
   "dependencies": {
-    "@angular/animations": "^20.1.8",
+    "@angular/animations": "^20.2.14",
     "@angular/cdk": "^20.2.14",
-    "@angular/common": "^20.0.0",
-    "@angular/compiler": "^20.0.0",
-    "@angular/core": "^20.0.0",
-    "@angular/forms": "^20.0.0",
+    "@angular/common": "^20.2.14",
+    "@angular/compiler": "^20.2.14",
+    "@angular/core": "^20.2.14",
+    "@angular/forms": "^20.2.14",
     "@angular/material": "^20.2.14",
-    "@angular/platform-browser": "^20.0.0",
-    "@angular/router": "^20.0.0",
+    "@angular/platform-browser": "^20.2.14",
+    "@angular/router": "^20.2.14",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular/build": "^20.0.4",
-    "@angular/cli": "^20.0.4",
-    "@angular/compiler-cli": "^20.0.0",
+    "@angular/build": "^20.2.14",
+    "@angular/cli": "^20.2.14",
+    "@angular/compiler-cli": "^20.2.14",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.7.0",
     "karma": "~6.4.0",

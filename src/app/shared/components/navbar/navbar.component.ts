@@ -18,14 +18,14 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule
   ],
   template: `
+    <!-- Floating Logo -->
+    <a routerLink="/" class="floating-logo">
+      <img src="images/logo.png" alt="Ashan TechLabs Logo" class="logo-img" />
+    </a>
+
     <header class="navbar-wrapper">
       <app-scroll-progress></app-scroll-progress>
-      <div class="container navbar-container">
-        <!-- Logo -->
-        <a routerLink="/" class="logo logo-flex">
-          <img src="images/logo.png" alt="Ashan TechLabs Logo" class="logo-img" />
-        </a>
-
+      <div class="navbar-container">
         <!-- Desktop Navigation Links -->
         <nav class="desktop-menu">
           <a *ngFor="let link of navLinks" 
@@ -68,14 +68,42 @@ import { MatIconModule } from '@angular/material/icon';
     </header>
   `,
   styles: [`
+    .floating-logo {
+      position: fixed;
+      top: 18px;
+      left: 48px;
+      height: 72px;
+      z-index: 1001;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: all var(--transition-normal);
+      
+      @media (max-width: 1024px) {
+        top: 14px;
+        left: 24px;
+        height: 56px;
+      }
+    }
+    
+    .logo-img {
+      height: 100%;
+      width: auto;
+      border-radius: var(--border-radius-xs);
+      transition: all var(--transition-normal);
+    }
+    
+    :host-context(.dark-theme) .logo-img {
+      filter: invert(1) brightness(1.2);
+    }
+
     .navbar-wrapper {
       position: fixed;
-      top: 16px;
+      top: 24px;
       left: 50%;
       transform: translateX(-50%);
-      width: calc(100% - 48px);
-      max-width: 1280px;
-      height: 96px;
+      height: 60px;
+      width: fit-content;
       background: var(--card-bg);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
@@ -84,63 +112,28 @@ import { MatIconModule } from '@angular/material/icon';
       box-shadow: var(--shadow-md);
       z-index: 1000;
       transition: all var(--transition-normal);
+      display: flex;
+      align-items: center;
       
-      @media (max-width: 768px) {
-        top: 10px;
-        width: calc(100% - 24px);
-        height: 78px;
+      @media (max-width: 1024px) {
+        top: 16px;
+        right: 24px;
+        left: auto;
+        transform: none;
+        height: 52px;
       }
     }
     
     .navbar-container {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 16px;
       height: 100%;
-      padding: 0 32px !important;
+      padding: 0 16px !important;
       
       @media (max-width: 768px) {
-        padding: 0 16px !important;
-      }
-    }
-    
-    .logo {
-      font-family: var(--font-heading);
-      color: var(--text-primary);
-      
-      .logo-accent {
-        background: var(--primary-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-    }
-    .logo-flex {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-    .logo-img {
-      height: 80px;
-      width: auto;
-      border-radius: var(--border-radius-xs);
-      
-      @media (max-width: 768px) {
-        height: 62px;
-      }
-    }
-    
-    :host-context(.dark-theme) .logo-img {
-      filter: invert(1) brightness(1.2);
-    }
-    .logo-text {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      
-      @media (max-width: 480px) {
-        display: none;
+        padding: 0 12px !important;
+        gap: 8px;
       }
     }
     
@@ -162,6 +155,7 @@ import { MatIconModule } from '@angular/material/icon';
       border-radius: var(--border-radius-full);
       transition: all var(--transition-fast);
       position: relative;
+      white-space: nowrap;
       
       &:hover {
         color: var(--text-primary);
@@ -206,9 +200,10 @@ import { MatIconModule } from '@angular/material/icon';
     // Mobile Drawer
     .mobile-drawer {
       position: fixed;
-      top: 120px;
-      left: 0;
-      width: 100%;
+      top: 80px;
+      right: 24px;
+      left: auto;
+      width: 280px;
       background: var(--surface-solid);
       border: 1px solid var(--border-color);
       border-radius: var(--border-radius-lg);
@@ -220,12 +215,10 @@ import { MatIconModule } from '@angular/material/icon';
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       z-index: 999;
       
-      @media (min-width: 1025px) {
-        display: none;
-      }
-      
-      @media (max-width: 768px) {
-        top: 92px;
+      @media (max-width: 480px) {
+        width: calc(100% - 48px);
+        left: 24px;
+        right: 24px;
       }
       
       &.open {

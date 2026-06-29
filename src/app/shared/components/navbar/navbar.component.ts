@@ -70,12 +70,12 @@ import { MatIconModule } from '@angular/material/icon';
   styles: [`
     .navbar-wrapper {
       position: fixed;
-      top: 24px;
+      top: 16px;
       left: 50%;
       transform: translateX(-50%);
       width: calc(100% - 48px);
       max-width: 1280px;
-      height: 70px;
+      height: 96px;
       background: var(--card-bg);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
@@ -86,9 +86,9 @@ import { MatIconModule } from '@angular/material/icon';
       transition: all var(--transition-normal);
       
       @media (max-width: 768px) {
-        top: 12px;
+        top: 10px;
         width: calc(100% - 24px);
-        height: 60px;
+        height: 78px;
       }
     }
     
@@ -122,12 +122,12 @@ import { MatIconModule } from '@angular/material/icon';
       text-decoration: none;
     }
     .logo-img {
-      height: 56px;
+      height: 80px;
       width: auto;
       border-radius: var(--border-radius-xs);
       
       @media (max-width: 768px) {
-        height: 44px;
+        height: 62px;
       }
     }
     .logo-text {
@@ -202,7 +202,7 @@ import { MatIconModule } from '@angular/material/icon';
     // Mobile Drawer
     .mobile-drawer {
       position: fixed;
-      top: 80px;
+      top: 120px;
       left: 0;
       width: 100%;
       background: var(--surface-solid);
@@ -221,7 +221,7 @@ import { MatIconModule } from '@angular/material/icon';
       }
       
       @media (max-width: 768px) {
-        top: 68px;
+        top: 92px;
       }
       
       &.open {

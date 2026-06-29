@@ -236,28 +236,36 @@ export class TestimonialsComponent implements OnInit, OnDestroy {
 
   testimonials: Testimonial[] = [
     {
-      name: 'Sarah Jenkins',
+      name: 'Gokul',
       role: 'Founder & CEO',
-      company: 'LogixFlow ERP',
-      image: 'images/project-erp.png', // reusing generated images to ensure valid path
+      company: 'Gokul Tech',
+      image: 'images/project-turf.png',
       rating: 5,
-      text: 'Alex Rivera restructured our entire dashboard architecture using Angular signals. The load speeds of our logistics tables were reduced by 40%, and our engineering team became twice as fast. He is a premier architect.'
+      text: 'It was a wonderful experience working with you on my website. You were extremely patient in understanding my requirements, listening to every detail, and incorporating my ideas thoughtfully. The final website turned out exactly how I envisioned it. Your professionalism, creativity, and dedication throughout the process were truly appreciated. Highly recommended! Thank you.'
     },
     {
-      name: 'Dr. David Cho',
-      role: 'Director of Informatics',
-      company: 'CarePulse Health',
-      image: 'images/project-healthcare.png',
+      name: 'Manish',
+      role: 'Managing Director',
+      company: 'Manish Solutions',
+      image: 'images/project-plant.png',
       rating: 5,
-      text: 'Deploying our clinical portal with Alex was seamless. He designed a fully HIPAA compliant frontend grid system with robust scheduling sync APIs. Highly professional, responsive, and detail-oriented.'
+      text: 'It was a wonderful experience working with you on my website. You were extremely patient in understanding my requirements, listening to every detail, and incorporating my ideas thoughtfully. The final website turned out exactly how I envisioned it. Your professionalism, creativity, and dedication throughout the process were truly appreciated. Highly recommended! Thank you.'
     },
     {
-      name: 'Julian Vance',
-      role: 'VP of Product',
-      company: 'EduSync Academic',
-      image: 'images/project-education.png',
+      name: 'Tagini',
+      role: 'Operations Head',
+      company: 'Tagini Group',
+      image: 'images/project-myha.png',
       rating: 5,
-      text: 'We engaged Alex to design the real-time chat infrastructure and grading panels on our platform. The result is a modular, fluid application that parents and teachers love. Highly recommended full-stack developer.'
+      text: 'It was a wonderful experience working with you on my website. You were extremely patient in understanding my requirements, listening to every detail, and incorporating my ideas thoughtfully. The final website turned out exactly how I envisioned it. Your professionalism, creativity, and dedication throughout the process were truly appreciated. Highly recommended! Thank you.'
+    },
+    {
+      name: 'Wooden Castle',
+      role: 'Founder & CEO',
+      company: 'Wooden Castle Brand',
+      image: 'images/project-castle.png',
+      rating: 5,
+      text: 'It was a wonderful experience working with you on my website. You were extremely patient in understanding my requirements, listening to every detail, and incorporating my ideas thoughtfully. The final website turned out exactly how I envisioned it. Your professionalism, creativity, and dedication throughout the process were truly appreciated. Highly recommended! Thank you.'
     }
   ];
 

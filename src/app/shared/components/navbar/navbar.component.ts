@@ -24,7 +24,6 @@ import { MatIconModule } from '@angular/material/icon';
         <!-- Logo -->
         <a routerLink="/" class="logo logo-flex">
           <img src="images/logo.jpg" alt="Ashan TechLabs Logo" class="logo-img" />
-          <span class="logo-text">Ashan <span class="logo-accent">TechLabs</span></span>
         </a>
 
         <!-- Desktop Navigation Links -->
@@ -123,12 +122,12 @@ import { MatIconModule } from '@angular/material/icon';
       text-decoration: none;
     }
     .logo-img {
-      height: 38px;
+      height: 56px;
       width: auto;
       border-radius: var(--border-radius-xs);
       
       @media (max-width: 768px) {
-        height: 32px;
+        height: 44px;
       }
     }
     .logo-text {

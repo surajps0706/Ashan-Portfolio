@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface TimelineItem {
-  company: string;
-  role: string;
-  duration: string;
-  responsibilities: string[];
-  achievements: string[];
+  phase: string;
+  title: string;
+  subtitle: string;
+  icon: string;
+  details: string[];
+  outcomes: string[];
 }
 
 @Component({
@@ -22,10 +23,10 @@ interface TimelineItem {
 
       <!-- Section Header -->
       <div class="section-header">
-        <span class="subtitle">My Journey</span>
-        <h2 class="title">Professional Experience Timeline</h2>
+        <span class="subtitle">Our Process</span>
+        <h2 class="title">How We Approach Your Project</h2>
         <p class="desc">
-          A review of my engineering roles, core ownership areas, and key achievements over the years.
+          A step-by-step roadmap showing how we take a project from an initial idea to a high-performance, live production system.
         </p>
       </div>
 
@@ -35,36 +36,36 @@ interface TimelineItem {
         <div class="timeline-line"></div>
 
         <!-- Timeline Items -->
-        <div *ngFor="let item of experiences; let i = index" class="timeline-item" [class.even]="i % 2 === 0" [class.odd]="i % 2 !== 0">
+        <div *ngFor="let item of processes; let i = index" class="timeline-item" [class.even]="i % 2 === 0" [class.odd]="i % 2 !== 0">
           <!-- Dot Indicator -->
           <div class="timeline-dot">
-            <span class="material-symbols-outlined">work</span>
+            <span class="material-symbols-outlined">{{ item.icon }}</span>
           </div>
 
           <!-- Card Content -->
           <div class="timeline-card glass-card">
             <!-- Timeline Card Header -->
             <div class="card-header">
-              <span class="duration-tag">{{ item.duration }}</span>
-              <h3 class="role-title">{{ item.role }}</h3>
-              <h4 class="company-name">{{ item.company }}</h4>
+              <span class="duration-tag">{{ item.phase }}</span>
+              <h3 class="role-title">{{ item.title }}</h3>
+              <h4 class="company-name">{{ item.subtitle }}</h4>
             </div>
 
             <!-- Card Content Body -->
             <div class="card-body">
               <div class="timeline-section">
-                <h5>Core Responsibilities:</h5>
+                <h5>What We Do:</h5>
                 <ul class="resp-list">
-                  <li *ngFor="let resp of item.responsibilities">{{ resp }}</li>
+                  <li *ngFor="let detail of item.details">{{ detail }}</li>
                 </ul>
               </div>
 
               <div class="timeline-section achievement-section">
-                <h5>Key Accomplishments:</h5>
+                <h5>Key Deliverables & Goals:</h5>
                 <ul class="ach-list">
-                  <li *ngFor="let ach of item.achievements">
-                    <span class="material-symbols-outlined star-icon">star</span>
-                    <span>{{ ach }}</span>
+                  <li *ngFor="let outcome of item.outcomes">
+                    <span class="material-symbols-outlined star-icon">done_all</span>
+                    <span>{{ outcome }}</span>
                   </li>
                 </ul>
               </div>
@@ -250,47 +251,95 @@ interface TimelineItem {
   `]
 })
 export class TimelineComponent {
-  experiences: TimelineItem[] = [
+  processes: TimelineItem[] = [
     {
-      company: 'Veloce Solutions (Contract)',
-      role: 'Lead Frontend Architect',
-      duration: '2024 - Present',
-      responsibilities: [
-        'Architect standalone component flows and custom Signal-based state systems for Angular enterprise workspaces.',
-        'Implement Webpack Module Federation structures to break massive monorepos into micro-frontends.',
-        'Mentor a distributed frontend team of 8 engineers and establish automated linting, testing, and PR reviews guidelines.'
+      phase: 'Phase 1',
+      title: 'Discovery & Requirements Analysis',
+      subtitle: 'Understanding your vision & constraints',
+      icon: 'search',
+      details: [
+        'Conduct initial strategy consultations to define product scope, goals, and business targets.',
+        'Document comprehensive technical specifications, target user flows, and stack requirements.',
+        'Establish clear project milestones, communication pipelines, and development timelines.'
       ],
-      achievements: [
-        'Accelerated dashboard initial loading speed, slashing bundle sizes by 32%.',
-        'Implemented a unified Tailwind/SCSS variables system used across 4 autonomous product dashboards.'
+      outcomes: [
+        'Detailed project brief and functional specification documents.',
+        'Formulated technical roadmap and high-level system architecture strategy.'
       ]
     },
     {
-      company: 'CloudStream Systems',
-      role: 'Senior Full-Stack Engineer',
-      duration: '2021 - 2024',
-      responsibilities: [
-        'Designed high-throughput REST APIs and GraphQL gateways using NestJS and PostgreSQL database indexing.',
-        'Built infrastructure deployments on AWS ECS using Docker containers and automated GitHub Actions CI/CD pipelines.',
-        'Crafted dynamic patient management dashboards with Angular Material and custom analytics charts.'
+      phase: 'Phase 2',
+      title: 'Design & Prototyping',
+      subtitle: 'Creating interactive, pixel-perfect user journeys',
+      icon: 'palette',
+      details: [
+        'Design modern Figma mockups with custom color schemes, typography, and layouts.',
+        'Craft detailed wireframes representing all viewport sizes (mobile, tablet, desktop).',
+        'Gather feedback and iterate on interactions to refine usability and aesthetics.'
       ],
-      achievements: [
-        'Migrated classic EC2 server stacks to Serverless ECS configurations, lowering cloud hosting billing by 24%.',
-        'Optimized slow patient intake database queries, reducing data load responses from 3s to 200ms.'
+      outcomes: [
+        'High-fidelity interactive prototype link in Figma.',
+        'Unified design tokens, component style guides, and asset libraries.'
       ]
     },
     {
-      company: 'InnoTech Solutions',
-      role: 'Frontend Developer',
-      duration: '2019 - 2021',
-      responsibilities: [
-        'Built modular frontend elements, reusable forms validators, and utility filters for multi-tenant educational apps.',
-        'Collaborated with designers to convert visual Figma wireframes into pixel-perfect HTML layouts.',
-        'Wrote end-to-end integration test suites utilizing Jasmine and Karma frameworks.'
+      phase: 'Phase 3',
+      title: 'Agile Development',
+      subtitle: 'Writing clean, high-performance production code',
+      icon: 'code',
+      details: [
+        'Scaffold modular, clean frontends using component-driven frameworks like Angular.',
+        'Build secure, scalable backend services and high-throughput REST or GraphQL APIs.',
+        'Employ signal-based state management strategies and optimize loading states for efficiency.'
       ],
-      achievements: [
-        'Successfully completed registration portals used across 12 public schools for over 15,000 active students.',
-        'Replaced third-party animation libraries with lightweight native Angular Animations, improving UI fluidity.'
+      outcomes: [
+        'Fully responsive layouts conforming to W3C and modern web design standards.',
+        'Modular, maintainable code repositories with automated linting configurations.'
+      ]
+    },
+    {
+      phase: 'Phase 4',
+      title: 'Quality Assurance & Testing',
+      subtitle: 'Ensuring stability, speed, and cross-browser reliability',
+      icon: 'fact_check',
+      details: [
+        'Perform multi-device testing on popular viewports, mobile operating systems, and browsers.',
+        'Conduct speed audits, security scans, and accessibility optimization tests.',
+        'Run thorough component integration testing to prevent regressions and security flaws.'
+      ],
+      outcomes: [
+        'Detailed test summary and performance optimization report.',
+        'Optimal SEO indexing configuration and clean console runtimes.'
+      ]
+    },
+    {
+      phase: 'Phase 5',
+      title: 'Deployment & Release',
+      subtitle: 'Launching your product safely to the world',
+      icon: 'rocket_launch',
+      details: [
+        'Configure secure cloud hosting environments (AWS, Vercel, Firebase) with custom domains.',
+        'Set up continuous deployment (CI/CD) pipelines to push updates automatically on git commits.',
+        'Implement database migrations, SSL certificates, and production-level caching servers.'
+      ],
+      outcomes: [
+        'Live, secure production website accessible worldwide.',
+        'Automated code-to-cloud release pipelines fully functional.'
+      ]
+    },
+    {
+      phase: 'Phase 6',
+      title: 'Support & Post-Launch Optimization',
+      subtitle: 'Sustaining long-term scaling and maintenance',
+      icon: 'support_agent',
+      details: [
+        'Monitor server load, error tracking platforms, and user behavior metrics to guarantee uptime.',
+        'Perform regular security patches, dependencies audits, and performance tuning.',
+        'Collaborate on future phase expansions and feature updates based on market feedback.'
+      ],
+      outcomes: [
+        'Proactive system health checks and scheduled database backups.',
+        'Ongoing feature iterations and performance upgrades.'
       ]
     }
   ];

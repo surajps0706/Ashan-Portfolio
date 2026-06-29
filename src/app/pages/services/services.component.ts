@@ -216,6 +216,13 @@ export class ServicesComponent {
       description: 'Integrating webhooks, message triggers, cron schedules, and CRM connections to eliminate manual processing bottlenecks.',
       icon: 'bolt',
       benefits: ['Eliminate human errors', '24/7 background automation', 'Third-party API connectors']
+    },
+    {
+      id: 'infra-support',
+      title: 'Infrastructure Support & DevOps',
+      description: 'Reliable infrastructure management, server configuration, cloud migration, continuous monitoring, and automated deployment pipelines to ensure 99.9% uptime.',
+      icon: 'dns',
+      benefits: ['Cloud hosting optimization', 'Automated CI/CD pipelines', 'Proactive security & uptime monitoring']
     }
   ];
 }

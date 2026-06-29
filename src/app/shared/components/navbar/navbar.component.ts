@@ -100,7 +100,7 @@ import { MatIconModule } from '@angular/material/icon';
     .navbar-wrapper {
       position: fixed;
       top: 24px;
-      left: 50%;
+      left: 60%;
       transform: translateX(-50%);
       height: 60px;
       width: fit-content;

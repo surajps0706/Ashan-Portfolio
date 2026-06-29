@@ -125,10 +125,16 @@ import { MatIconModule } from '@angular/material/icon';
       height: 80px;
       width: auto;
       border-radius: var(--border-radius-xs);
+      mix-blend-mode: multiply;
       
       @media (max-width: 768px) {
         height: 62px;
       }
+    }
+    
+    :host-context(.dark-theme) .logo-img {
+      filter: invert(1);
+      mix-blend-mode: screen;
     }
     .logo-text {
       font-size: 1.25rem;

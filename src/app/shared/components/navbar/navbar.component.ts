@@ -23,7 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
       <div class="container navbar-container">
         <!-- Logo -->
         <a routerLink="/" class="logo logo-flex">
-          <img src="images/logo.jpg" alt="Ashan TechLabs Logo" class="logo-img" />
+          <img src="images/logo.png" alt="Ashan TechLabs Logo" class="logo-img" />
         </a>
 
         <!-- Desktop Navigation Links -->
@@ -125,7 +125,6 @@ import { MatIconModule } from '@angular/material/icon';
       height: 80px;
       width: auto;
       border-radius: var(--border-radius-xs);
-      mix-blend-mode: multiply;
       
       @media (max-width: 768px) {
         height: 62px;
@@ -133,8 +132,7 @@ import { MatIconModule } from '@angular/material/icon';
     }
     
     :host-context(.dark-theme) .logo-img {
-      filter: invert(1);
-      mix-blend-mode: screen;
+      filter: invert(1) brightness(1.2);
     }
     .logo-text {
       font-size: 1.25rem;

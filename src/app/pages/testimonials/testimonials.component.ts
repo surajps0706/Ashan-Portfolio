@@ -52,11 +52,7 @@ interface Testimonial {
 
               <!-- Client Bio Info -->
               <div class="client-bio">
-                <img [src]="item.image" [alt]="item.name" class="client-photo" />
-                <div class="client-info">
-                  <h4 class="client-name">{{ item.name }}</h4>
-                  <p class="client-details">{{ item.role }} &middot; <strong>{{ item.company }}</strong></p>
-                </div>
+                <h4 class="client-name">{{ item.name }}</h4>
               </div>
             </div>
           </div>
@@ -141,30 +137,21 @@ interface Testimonial {
     
     .client-bio {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 16px;
       margin-top: 16px;
-      text-align: left;
-    }
-    
-    .client-photo {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--border-color);
+      text-align: center;
     }
     
     .client-name {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin: 0 0 2px 0;
-    }
-    
-    .client-details {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-primary);
       margin: 0;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     
     // Navigation arrows
